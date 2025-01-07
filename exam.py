@@ -1,13 +1,14 @@
 # Name: Cinta Schoorl
 # Studentnumber: 13562045
 # DPR exam - Fall 2024
+# hoe ziet deze verandering eruit
 import numpy as np
 import pandas as pd
 
 ### Part 1: OOP ###
 class HikingTrail():
     def __init__(self, name, length_km, difficulty_rating):
-        self.name = name
+        self.name = name_en_deze
         self.length_km = length_km
         self.difficulty_rating = difficulty_rating
 
