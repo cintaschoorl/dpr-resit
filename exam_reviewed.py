@@ -57,11 +57,45 @@ class Park():
         for trail in self.trails:
             trail.print_summary()
 
-"""
-het lukte eerst prima maar bij print summary ging het mis en toen werkte ik terug om
-bij add trail de juiste vorm van classes in een dictionary goed te zetten, maar toen raakt ik het overzicht kwijt :((
+if __name__ == "__main__":
+    print("\n=== Part 1: OOP ===")
+    trail_a = HikingTrail("Eagle Peak", 5.3, 7)
+    trail_b = HikingTrail("Sunset Loop", 2.0, 4)
+    trail_c = HikingTrail("Pine Ridge", 10.0, 9)
 
-was de bedoeling eerst om gewoon met de attributes van de trail class te werken,
-maar door de dictionary structuur wilde ik het class object als value van de naam als key zetten,
-hier had ik uiteindelijk te weinig tijd voor om volledig om te zetten...
-"""
+    park = Park("Green Valley National Park", "California")
+
+    # Print initial average difficulty (should be "0" as we have no trails yet)
+    print(f"Average difficulty before adding trails: {park.average_difficulty()}")
+
+    # Add the trails to the park
+    park.add_trail(trail_a)
+    park.add_trail(trail_b)
+    park.add_trail(trail_c)
+
+    # This should print 3, as we've added 3 trails
+    print(f"The park now has {len(park.trails)} trails.\n")
+
+    # # Adding a trail with the same name twice should print an error
+    # park.add_trail(trail_a)
+    #
+    # # Print average difficulty after adding trails
+    # print(f"Average difficulty after adding trails: {park.average_difficulty()}\n")
+    #
+    # # Print a summary of the park
+    # park.print_summary()
+    #
+    # # Update the difficulty of one trail
+    # trail_b.update_difficulty(5)
+    # print(f"\nAfter updating '{trail_b.name}' difficulty:")
+    # park.print_summary()
+    #
+    # # Remove a trail without an error
+    # park.remove_trail("Eagle Peak")
+    #
+    # # This one should give an error
+    # park.remove_trail("Does Not Exist")
+    #
+    # # Print a summary of the park after removals
+    # print("\nAfter removals:")
+    # park.print_summary()
