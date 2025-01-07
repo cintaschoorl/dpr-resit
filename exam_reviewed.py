@@ -1,5 +1,4 @@
 import numpy as np
-import pandas as pd
 
 ### Part 1: OOP ###
 class HikingTrail():
@@ -8,17 +7,13 @@ class HikingTrail():
         self.length_km = length_km
         self.difficulty_rating = difficulty_rating
 
-        self.all_ratings = []
-
     def update_difficulty(self, new_difficulty):
-        # add to list of ratings
-        self.all_ratings.append(new_difficulty)
-
-        # update trail difficulty as mean of list
-        self.difficulty_rating = np.mean(self.all_ratings).round()
+        #! hoefde niet het gemiddelde van meerdere difficulties, gwn updaten
+        self.difficulty_rating = new_difficulty
 
     def print_summary(self):
         print(f"{self.name}: {self.length_km} km, difficulty {self.difficulty_rating}")
+
 
 class Park():
     def __init__(self, name, location):
